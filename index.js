@@ -31,27 +31,25 @@ const bgColor = {
 };
 
 const gui = new dat.GUI();
+gui.close();
 
-const waveFolder = gui.addFolder("wave");
+const waveFolder = gui.addFolder("Wave");
 waveFolder.add(wave, "y_zero", 0, innerHeight);
 waveFolder.add(wave, "delta_x", 0.01, 10);
 waveFolder.add(wave, "frequency", 0.001, 0.1);
 waveFolder.add(wave, "amplitude", 0, 100);
 waveFolder.add(wave, "speed", 0.005, 0.05);
-waveFolder.open();
 
-const strokeFolder = gui.addFolder("stroke");
+const strokeFolder = gui.addFolder("Stroke");
 strokeFolder.add(strokeColor, "hue", 0, 255);
 strokeFolder.add(strokeColor, "saturation", 0, 100);
 strokeFolder.add(strokeColor, "lightness", 0, 100);
-strokeFolder.open();
 
-const backgroundFolder = gui.addFolder("background");
+const backgroundFolder = gui.addFolder("Background");
 backgroundFolder.add(bgColor, "red", 0, 255);
 backgroundFolder.add(bgColor, "green", 0, 255);
 backgroundFolder.add(bgColor, "blue", 0, 255);
 backgroundFolder.add(bgColor, "alpha", 0.01, 0.1);
-backgroundFolder.open();
 
 let xStart = 0;
 const graph = () => {
