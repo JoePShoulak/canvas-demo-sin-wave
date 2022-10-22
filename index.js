@@ -27,6 +27,8 @@ const adjustedSin = (x) => {
   return Math.sin(x * frequency) * -amplitude;
 };
 
+const gui = new dat.GUI();
+
 const animate = () => {
   requestAnimationFrame(animate);
 
